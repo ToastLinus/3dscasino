@@ -1,0 +1,37 @@
+BasicInfo:
+  Title: Casino3DS
+  ProductCode: CTR-P-CSNO
+  Logo: Nintendo
+TitleInfo:
+  UniqueId: 0xf8a01
+  Category: Application
+Option:
+  UseOnSD: true
+  FreeProductCode: true
+  MediaFootprint: SDCard
+  EnableCompress: true
+AccessControlInfo:
+  CoreVersion: 2
+  DescVersion: 2
+  ReleaseKernelMajor: "02"
+  ReleaseKernelMinor: "33"
+  UseExtSaveData: false
+  FileSystemAccess:
+    - DirectSdmc
+  IdealProcessor: 0
+  AffinityMask: 1
+  Priority: 16
+  MaxCpu: 0x9E
+  MemoryType: Application
+  SystemMode: 64MB
+  CpuSpeed: 268MHz
+  EnableL2Cache: false
+  CanAccessCore2: true
+  CanUseNonAlphabetAndNumber: true
+  PermitMainFunctionArgument: true
+  CanShareDeviceMemory: true
+  ResourceLimitCategory: Application
+SystemControlInfo:
+  SaveDataSize: 0KB
+  RemasterVersion: 0
+  StackSize: 0x40000
