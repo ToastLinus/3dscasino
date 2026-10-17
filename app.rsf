@@ -10,7 +10,7 @@ TitleInfo:
   Category: Application
 
 Option:
-  UseOnSD: false
+  UseOnSD: true
   FreeProductCode: true
   EnableCrypt: false
   EnableCompress: true
