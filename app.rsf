@@ -1,5 +1,5 @@
 BasicInfo:
-  Title: Casino
+  Title: GoldCasino3ds
   CompanyCode: "00"
   ProductCode: CTR-P-CSNO
   ContentType: Application
@@ -23,8 +23,7 @@ AccessControlInfo:
   UseExtSaveData: false
   FileSystemAccess:
    - DirectSdmc
-- DirectSdmcWrite
-- Debug
+   - DirectSdmcWrite
   MemoryType: Application
   SystemMode: 64MB
   IdealProcessor: 0
