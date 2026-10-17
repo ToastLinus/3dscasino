@@ -49,7 +49,7 @@ static float rRot = 0, pRot = 0;
 /* ---------- Zeichnen auf den unteren Bildschirm ---------- */
 static inline void put(int x, int y, Col c) {
   if ((unsigned)x >= BW || (unsigned)y >= BH) return;
-  u8 *p = fb + ((((int)fw - 1 - y) * (int)fh) + x) * 3;
+  u8 *p = fb + (x * 240 + (239 - y)) * 3;
   p[0] = c.b; p[1] = c.g; p[2] = c.r;
 }
 static void rect(int x, int y, int w, int h, Col c) {
@@ -411,6 +411,7 @@ static void buildAll(void) {
 
 int main(void) {
   gfxInitDefault();
+  gfxSetDoubleBuffering(GFX_TOP, false);
   consoleInit(GFX_TOP, &top);
   gfxSetDoubleBuffering(GFX_BOTTOM, true);
   srand(time(NULL));
