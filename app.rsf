@@ -8,7 +8,6 @@ TitleInfo:
 Option:
   UseOnSD: true
   FreeProductCode: true
-  MediaFootprint: SDCard
   EnableCompress: true
 AccessControlInfo:
   CoreVersion: 2
