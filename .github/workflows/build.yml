@@ -12,14 +12,15 @@ jobs:
       - name: CIA bauen
         continue-on-error: true
         run: |
-          apt-get update && apt-get install -y python3 wget unzip git build-essential
+          apt-get update && apt-get install -y python3 wget unzip git build-essential cmake
           python3 gen_assets.py
           wget -nv https://github.com/3DSGuy/Project_CTR/releases/download/makerom-v0.18.4/makerom-v0.18.4-ubuntu_x86_64.zip -O mr.zip
           unzip -oq mr.zip -d mr
           MR=$(find mr -type f -name 'makerom*' ! -name '*.zip' | head -1)
-          git clone --recursive --depth 1 https://github.com/Steveice10/bannertool.git bt
-          make -C bt
-          BT=$(find bt -type f -name bannertool | head -1)
+          git clone --recursive --depth 1 https://github.com/carstene1ns/3ds-bannertool.git bt
+          cmake -S bt -B bt/build
+          cmake --build bt/build
+          BT=$(find bt/build -type f -name bannertool | head -1)
           echo "MR=$MR BT=$BT"
           chmod +x "$BT" "$MR"
           "$BT" makebanner -i banner.png -a silence.wav -o banner.bnr
